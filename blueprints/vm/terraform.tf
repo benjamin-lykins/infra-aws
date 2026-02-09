@@ -1,6 +1,10 @@
 terraform {
   cloud {
     organization = "lykins"
+    workspaces {
+      project = "bell"
+      tags    = ["demo"]
+    }
   }
 }
 
