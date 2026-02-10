@@ -1,3 +1,10 @@
+variable "default_tags" {
+  description = "A map of default tags to apply to all resources"
+  type        = map(string)
+  default     = {}
+
+}
+
 variable "aws_region" {
   description = "The AWS region to deploy resources in"
   type        = string
