@@ -5,6 +5,7 @@ module "compute" {
   version = "~> 1.0.0"
 
   instance_type = var.compute_instance_type
+  subnet_id     = var.compute_subnet_id
 }
 
 module "s3" {

@@ -62,6 +62,12 @@ variable "compute_create" {
   default     = true
 }
 
+variable "compute_subnet_id" {
+  description = "The ID of the subnet to launch the compute instance in"
+  type        = string
+
+}
+
 variable "compute_instance_type" {
   description = "The instance type for the compute instance"
   type        = string
