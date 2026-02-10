@@ -29,8 +29,18 @@ module "lb" {
 
 }
 
+variable "target_group_create" {
+  description = "Whether to create a target group for the load balancer"
+  type        = bool
+  default     = true
+}
+
 module "target_group" {
-  source  = "app.terraform.io/lykins/targetgroup/aws"
-  version = "~> 1.0.0"
+  count                    = var.lb_create && var.target_group_create ? 1 : 0
+  source                   = "app.terraform.io/lykins/targetgroup/aws"
+  version                  = "~> 1.0.0"
+  vpc_id                   = var.vpc_id
+  tg_name                  = "${var.lb_name}-tg"
+  target_group_attachments = []
 
 }

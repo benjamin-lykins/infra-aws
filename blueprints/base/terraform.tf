@@ -3,7 +3,7 @@ terraform {
     organization = "lykins"
     workspaces {
       project = "bell"
-      tags    = ["demo"]
+      tags    = ["demo", "vpc"]
     }
   }
   required_providers {
