@@ -3,7 +3,7 @@ terraform {
     organization = "lykins"
     workspaces {
       project = "bell"
-      tags    = ["demo", "vm"]
+      tags    = ["vm"]
     }
   }
 }
