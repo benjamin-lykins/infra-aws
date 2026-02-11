@@ -1,12 +1,12 @@
-# terraform {
-#   cloud {
-#     organization = "lykins"
-#     workspaces {
-#       project = "bell"
-#       tags    = ["demo", "vm"]
-#     }
-#   }
-# }
+terraform {
+  cloud {
+    organization = "lykins"
+    workspaces {
+      project = "bell"
+      tags    = ["demo", "vm"]
+    }
+  }
+}
 
 provider "aws" {
   region = var.aws_region
